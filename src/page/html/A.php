@@ -5,6 +5,9 @@ use tekki\core\php\DOMElement;
 use FirePHP;
 class A extends HTMLElementEvent {
     /*
+    //  I love to test this things!
+    */
+    /*
     //  The <a> tag defines a hyperlink, which is used to link from one page to another.
     //
     //  The most important attribute of the <a> element is the href attribute, which indicates the link's destination.
