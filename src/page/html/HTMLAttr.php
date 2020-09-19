@@ -55,6 +55,10 @@ class HTMLAttr{
     protected const CONTROLS = 'controls';
     #coords	<area>	Specifies the coordinates of the area
     protected const COORDS = 'coords';
+
+    public const CROSSORIGIN = 'crossorgin';
+    public const CROSSORIGIN_ANONYMOUS = 'anonymous';
+    public const CROSSORIGIN_USE_CREDENTIALS = 'use-credentials';
     #data	<object>	Specifies the URL of the resource to be used by the object
     protected const DATA = 'data';
     #data-*	Global Attributes	Used to store custom data protected to the page or application
@@ -136,6 +140,8 @@ class HTMLAttr{
     public const LANG = 'lang';
     #list	<input>	Refers to a <datalist> element that contains pre-defined options for an <input> element
     protected const LIST = 'list';
+
+    public const LONGDESC = 'longdesc';
     #loop	<audio>, <video>	Specifies that the audio/video will start over again, every time it is finished
     protected const LOOP = 'loop';
     #low	<meter>	Specifies the range that is considered to be a low value
