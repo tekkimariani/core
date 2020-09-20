@@ -12,7 +12,7 @@ class HTML extends HTMLElement {
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
     public function __destruct(){
-        echo parent::__destruct();
+        echo $this->saveHTML();
     }
     // Tags, that only nestet in html
     public function head(){

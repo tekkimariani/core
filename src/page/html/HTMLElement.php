@@ -22,10 +22,13 @@ class HTMLElement extends HTMLAttr{
 		}
         $this->element = $this->create($name, $container, $attr, $content); 		
 	}
-	public function __destruct(){
+	public function saveHTML(){
 		$html = '<!doctype html>'.$this->doc->saveHTML();
         $this->console->log(__METHOD__.': '.$html);
-		return $html;
+		return $html;		
+	}
+	public function __destruct(){
+
 	}
 	public function save(DOMElement $html): void{
         $this->console->log(__METHOD__);
