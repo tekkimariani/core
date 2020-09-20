@@ -2,25 +2,27 @@
 namespace tekki\core\page\html;
 use tekki\core\php\DOMDocument;
 use tekki\core\php\DOMElement;
+use tekki\core\page\html\attr\Src;
 use FirePHP;
 class Img extends HTMLElementEvent {
+    use Src;
     /*
     alt	text	Specifies an alternate text for an image
-crossorigin	anonymous
-use-credentials	Allow images from third-party sites that allow cross-origin access to be used with canvas
-height	pixels	Specifies the height of an image
-ismap	ismap	Specifies an image as a server-side image map
-longdesc	URL	Specifies a URL to a detailed description of an image
-referrerpolicy	no-referrer
-no-referrer-when-downgrade
-origin
-origin-when-cross-origin
-unsafe-url	Specifies which referrer to use when fetching the image
-sizes	sizes	Specifies image sizes for different page layouts
-src	URL	Specifies the path to the image
-srcset	URL-list	Specifies a list of image files to use in different situations
-usemap	#mapname	Specifies an image as a client-side image map
-width	pixels	Specifies the width of an image
+    crossorigin	anonymous
+    use-credentials	Allow images from third-party sites that allow cross-origin access to be used with canvas
+    height	pixels	Specifies the height of an image
+    ismap	ismap	Specifies an image as a server-side image map
+    longdesc	URL	Specifies a URL to a detailed description of an image
+    referrerpolicy	no-referrer
+    no-referrer-when-downgrade
+    origin
+    origin-when-cross-origin
+    unsafe-url	Specifies which referrer to use when fetching the image
+    sizes	sizes	Specifies image sizes for different page layouts
+    src	URL	Specifies the path to the image
+    srcset	URL-list	Specifies a list of image files to use in different situations
+    usemap	#mapname	Specifies an image as a client-side image map
+    width	pixels	Specifies the width of an image
 */
     public const ALT = parent::ALT;
     public const CROSSORIGIN = parent::CROSSORIGIN;
@@ -41,7 +43,6 @@ width	pixels	Specifies the width of an image
     public const USEMAP = parent::USEMAP;
     public const WIDTH = parent::WIDTH;
     protected $name = 'img';
-    use AttrSrc;
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
         $this->console->setEnabled(true);
