@@ -3,7 +3,6 @@ namespace tekki\core\page\html;
 use tekki\core\php\DOMDocument;
 use tekki\core\php\DOMElement;
 use FirePHP;
-use AttrSrc;
 class Img extends HTMLElementEvent {
     /*
     alt	text	Specifies an alternate text for an image
