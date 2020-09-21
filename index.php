@@ -1,10 +1,11 @@
 <?php
 require_once './vendor/autoload.php';
-use tekki\core\page\html\HTML;
+use tekki\core\html\HTML;
 $html = new HTML();
 $body = $html->body();
 $img = $body->img();
-$img->attrSrc('pic/ohne_gentechnik.jpg');
+$img->setSrc('pic/ohne_gentechnik.jpg');
+$img->setClass('fu');
 // $img->attrWidth('100px');
 // $img->attrHeight('100px');
 // $img->attrAlt('Bioland');
