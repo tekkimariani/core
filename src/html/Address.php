@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Address extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+class Address extends HTMLElement {
+    use GlobalAttributes;
+    use EventAttributes;
     /*
     The <address> tag defines the contact information 
     for the author/owner of a document or an article.

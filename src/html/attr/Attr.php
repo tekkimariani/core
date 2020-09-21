@@ -36,7 +36,7 @@ class Attr{
     #cite	<blockquote>, <del>, <ins>, <q>	Specifies a URL which explains the quote/deleted/inserted text
     public const CITE = 'cite';
     #class	Global Attributes	Specifies one or more classnames for an element (refers to a class in a style sheet)
-    public const CLASS = 'class';
+    public const _CLASS = 'class';
     #color	Not supported in HTML 5.	Specifies the text color of an element. Use CSS instead
     #Not supported
     #cols	<textarea>	Specifies the visible width of a text area

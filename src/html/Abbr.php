@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Abbr extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+class Abbr extends HTMLElement {
+    use GlobalAttributes;
+    use EventAttributes;
     /*
     The <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
     Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.

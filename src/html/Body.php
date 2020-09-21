@@ -3,7 +3,10 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Body extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes};
+
+class Body extends HTMLElement {
     /*
     //  The <body> tag defines the document's body.
     //

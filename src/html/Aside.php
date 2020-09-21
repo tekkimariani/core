@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Aside extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+class Aside extends HTMLElement {
+    use GlobalAttributes;
+    use EventAttributes;
     /*
     */
     protected $name = 'aside';

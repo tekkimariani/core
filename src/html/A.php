@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class A extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+class A extends HTMLElement {
+    use GlobalAttributes;
+    use EventAttributes;
     /*
     //  I love to test this things!
     */

@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Article extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+class Article extends HTMLElement {
+    use GlobalAttributes;
+    use EventAttributes;
     /*
 Definition and Usage
 The <article> tag specifies independent, self-contained content.

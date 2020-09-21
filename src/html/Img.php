@@ -3,10 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-use tekki\core\html\attr\{Attr, Alt, Crossorigin, Height, Ismap, Longdesc, Referrerpolicy, Sizes, Src, Srcset, Usemap, Width, Class};
+use tekki\core\html\attr\{Attr, Alt, Crossorigin, Height, Ismap, Longdesc, Referrerpolicy, Sizes, Src, Srcset, Usemap, Width, _Class};
 use tekki\core\html\dom\HTMLElement;
 class Img extends HTMLElement {
-    use Class;
+    use _Class;
+    /*
     use Alt;
     use Crossorigin;
     use Height;
@@ -14,10 +15,13 @@ class Img extends HTMLElement {
     use Longdesc;
     use Referrerpolicy;
     use Sizes;
+    */
     use Src;
+    /*
     use Srcset;
     use Usemap;
     use Width;
+    */
     //use tekki\core\page\html\attr\{Alt, Crossorigin, Height, Ismap, Longdesc, Referrerpolicy, Sizes, Src, Srcset, Usemap, Width};
     /*
     alt	text	Specifies an alternate text for an image

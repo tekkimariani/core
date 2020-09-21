@@ -1,7 +1,7 @@
 <?php
 namespace tekki\core\html\attr;
-trait Class{
+trait _Class{
     public function setClass(string $value){
-        $this->appendAttribut([Attr::CLASS => $value]);
+        $this->appendAttribut([Attr::_CLASS => $value]);
     }
 }

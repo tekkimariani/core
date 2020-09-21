@@ -1,6 +1,6 @@
 <?php
 namespace tekki\core\html\attr;
-trait Src{
+trait EventAttributes{
     private function addEvent(string $name, string $script) {
         //	Event
         //		Specifies the location of the linked document
