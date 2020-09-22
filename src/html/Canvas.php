@@ -3,7 +3,13 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Canvas extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes, Attr};
+use tekki\core\html\attr\{Height, Width};
+class Canvas extends HTMLElement {
+    use EventAttributes;
+    use Height;
+    use Width;
     /*
     //  The <canvas> tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
     //
@@ -15,8 +21,8 @@ class Canvas extends HTMLElementEvent {
     //  height	pixels	Specifies the height of the canvas. Default value is 150
     //  width	pixels	Specifies the width of the canvas Default value is 300
     */
-    public const HEIGHT = parent::HEIGHT;
-    public const WIDTH = parent::WIDTH;
+    public const HEIGHT     = Attr::HEIGHT;
+    public const WIDTH      = Attr::WIDTH;
     protected $name = 'canvas';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
@@ -24,10 +30,12 @@ class Canvas extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+    /*
     public function attrHeight(int $height){
-        $this->appendAttribut([self::VALUE => $height]);
+        $this->appendAttribut([Attr::HEIGHT => $height]);
     }
-    public function attrValue(int $width){
-        $this->appendAttribut([self::VALUE => $width]);
+    public function attrWidth(int $width){
+        $this->appendAttribut([Attr::WIDTH => $width]);
     }
+    */
 }

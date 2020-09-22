@@ -3,7 +3,21 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Button extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes, Attr};
+use tekki\core\html\attr\{Autofocus, Disabled, Form, Formenctype, Formmethod, Formnovalidate, Formtarget, Name, Type, Value};
+class Button extends HTMLElement {
+    use EventAttributes;
+    use Autofocus;
+    use Disabled;
+    use Form;
+    use Formenctype;
+    use Formmethod;
+    use Formnovalidate;
+    use Formtarget;
+    use Name;
+    use Type;
+    use Value;
     /*
     //  The <button> tag defines a clickable button.
     //
@@ -33,29 +47,29 @@ class Button extends HTMLElementEvent {
     //  submit	Specifies the type of button
     //  value	text	Specifies an initial value for the button
     */
-    public const AUTOFOCUS = parent::AUTOFOCUS;
-    public const DISABLED = parent::DISABLED;
-    public const FORM = parent::FORM;
-    public const FORMACTION = parent::FORMACTION;
-    public const FORMENCTYPE = parent::FORMENCTYPE;
-    public const FORMENCTYPE_APPLICATION_X_WWW_FORM_URLENCODED = parent::FORMENCTYPE_APPLICATION_X_WWW_FORM_URLENCODED;
-    public const FORMENCTYPE_MULTIPART_FORM_DATA = parent::FORMENCTYPE_MULTIPART_FORM_DATA;
-    public const FORMENCTYPE_TEXT_PLAIN = parent::FORMENCTYPE_TEXT_PLAIN;
-    public const FORMMETHOD = parent::FORMMETHOD;
-    public const FORMMETHOD_GET = parent::FORMMETHOD_GET;
-    public const FORMMETHOD_POST = parent::FORMMETHOD_POST;
-    public const FORMNOVALIDATE = parent::FORMNOVALIDATE;
-    public const FORMTARGET = parent::FORMTARGET;
-    public const FORMTARGET_BLANK = parent::FORMTARGET_BLANK;
-    public const FORMTARGET_SELF = parent::FORMTARGET_SELF;
-    public const FORMTARGET_PARENT = parent::FORMTARGET_PARENT;
-    public const FORMTARGET_TOP = parent::FORMTARGET_TOP;
-    public const NAME = parent::NAME;
-    public const TYPE = parent::TYPE;
-    public const TYPE_BUTTON = parent::TYPE_BUTTON;
-    public const TYPE_RESET = parent::TYPE_RESET;
-    public const TYPE_SUBMIT = parent::TYPE_SUBMIT;
-    public const VALUE = parent::VALUE;
+    public const AUTOFOCUS                                      = Attr::AUTOFOCUS;
+    public const DISABLED                                       = Attr::DISABLED;
+    public const FORM                                           = Attr::FORM;
+    public const FORMACTION                                     = Attr::FORMACTION;
+    public const FORMENCTYPE                                    = Attr::FORMENCTYPE;
+    public const FORMENCTYPE_APPLICATION_X_WWW_FORM_URLENCODED  = Attr::FORMENCTYPE_APPLICATION_X_WWW_FORM_URLENCODED;
+    public const FORMENCTYPE_MULTIPART_FORM_DATA                = Attr::FORMENCTYPE_MULTIPART_FORM_DATA;
+    public const FORMENCTYPE_TEXT_PLAIN                         = Attr::FORMENCTYPE_TEXT_PLAIN;
+    public const FORMMETHOD                                     = Attr::FORMMETHOD;
+    public const FORMMETHOD_GET                                 = Attr::FORMMETHOD_GET;
+    public const FORMMETHOD_POST                                = Attr::FORMMETHOD_POST;
+    public const FORMNOVALIDATE                                 = Attr::FORMNOVALIDATE;
+    public const FORMTARGET                                     = Attr::FORMTARGET;
+    public const FORMTARGET_BLANK                               = Attr::FORMTARGET_BLANK;
+    public const FORMTARGET_SELF                                = Attr::FORMTARGET_SELF;
+    public const FORMTARGET_PARENT                              = Attr::FORMTARGET_PARENT;
+    public const FORMTARGET_TOP                                 = Attr::FORMTARGET_TOP;
+    public const NAME                                           = Attr::NAME;
+    public const TYPE                                           = Attr::TYPE;
+    public const TYPE_BUTTON                                    = Attr::TYPE_BUTTON;
+    public const TYPE_RESET                                     = Attr::TYPE_RESET;
+    public const TYPE_SUBMIT                                    = Attr::TYPE_SUBMIT;
+    public const VALUE                                          = Attr::VALUE;
     protected $name = 'button';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
@@ -63,15 +77,22 @@ class Button extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+    /*
     public function attrAutofocus(){
         $this->appendAttribut([self::AUTOFOCUS => null]);
     }
+    */
+    /*
     public function attrDisabled(){
         $this->appendAttribut([self::DISABLED => null]);
     }
+    */
+    /*
     public function attrForm($formId){
         $this->appendAttribut([self::FORM => $formId]);
     }
+    */
+    /*
     public function attrFormEnctype(string $enctype){
         $this->appendAttribut([self::FORMENCTYPE => $enctype]);
     }
@@ -84,6 +105,8 @@ class Button extends HTMLElementEvent {
     public function attrFormEnctypeTextPlain() {
         $this->attrFormEnctype(self::FORMENCTYPE_TEXT_PLAIN);
     }
+    */
+    /*
     public function attrFormMethod(string $method){
         $this->appendAttribut([self::FORMMETHOD => $method]);
     }
@@ -93,9 +116,13 @@ class Button extends HTMLElementEvent {
     public function attrFormMethodPost() {
         $this->attrFormMethod(self::FORMMETHOD_POST);
     }
+    */
+    /*
     public function attrFormnovalidate(){
         $this->appendAttribut([self::FORMNOVALIDATE => null]);
     }
+    */
+    /*
     public function attrFormTarget(string $target){
         $this->appendAttribut([self::FORMTARGET => $target]);
     }
@@ -111,12 +138,18 @@ class Button extends HTMLElementEvent {
     public function attrFormTargetTop() {
         $this->attrFormTarget(self::FORMTARGET_TOP);
     }
+    */
+    /*
     public function attrName(string $name){
         $this->appendAttribut([self::NAME => $name]);
     }
+    */
+    /*
     public function attrType(string $type){
         $this->appendAttribut([self::TYPE => $type]);
     }
+    */
+    /*
     public function attrTypeButton() {
         $this->attrType(self::TYPE_BUTTON);
     }
@@ -126,7 +159,10 @@ class Button extends HTMLElementEvent {
     public function attrTypeSubmit() {
         $this->attrType(self::TYPE_SUBMIT);
     }
+    */
+    /*
     public function attrValue(string $value){
         $this->appendAttribut([self::VALUE => $value]);
     }
+    */
 }

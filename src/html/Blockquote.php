@@ -3,11 +3,16 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Blockquote extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes, Attr};
+use tekki\core\html\attr\{Cite};
+class Blockquote extends HTMLElement {
+    use EventAttributes;
+    use Cite;
     /*
     // The <blockquote> tag specifies a section that is quoted from another source.
     */
-    public const CITE = parent::CITE;
+    public const CITE = Attr::CITE;
     protected $name = 'blockquote';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
@@ -15,7 +20,9 @@ class Blockquote extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+    /*
     public function attrCite($url){
         $this->appendAttribut([self::CITE => $url]);
     }
+    */
 }

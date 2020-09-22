@@ -3,6 +3,7 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
+use tekki\core\html\dom\HTMLElement;
 class Head extends HTMLElement {
     protected $name = 'head';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){

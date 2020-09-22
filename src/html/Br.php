@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Br extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class Br extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  The <br> tag inserts a single line break.
     //
@@ -24,7 +28,7 @@ class Br extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
+
     // Couldn't uses elements as value.
     // Couldn't uses text as value.
 }

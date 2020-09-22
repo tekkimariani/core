@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Cite extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class Cite extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  The <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
     //
@@ -18,5 +22,4 @@ class Cite extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
 }

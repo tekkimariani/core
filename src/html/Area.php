@@ -4,10 +4,20 @@ use \DOMDocument;
 use \DOMElement;
 use FirePHP;
 use tekki\core\html\dom\HTMLElement;
-use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+use tekki\core\html\attr\{EventAttributes, Attr};
+use tekki\core\html\attr\{Alt, Coords, Download, Href, Hreflang, Media, Rel, Shape,  Target, Type};
 class Area extends HTMLElement {
-    use GlobalAttributes;
     use EventAttributes;
+    use Alt;
+    use Coords;
+    use Download;
+    use Href;
+    use Hreflang;
+    use Media;
+    use Rel;
+    use Shape;
+    use Target;
+    use Type;  
     /*
     //  INFO: <area> is an empty element
     //
@@ -48,35 +58,35 @@ class Area extends HTMLElement {
     // framename	Specifies where to open the target URL
     // type	media_type	Specifies the media type of the target URL
     */
-    public const ALT = parent::ALT;
-    public const COORDS = parent::COORDS;
-    public const DOWNLOAD = parent::DOWNLOAD;
-    public const HREF = parent::HREF;
-    public const HREFLANG = parent::HREFLANG;
-    public const MEDIA = parent::MEDIA;
-    public const REL = parent::REL;
-    public const REL_ALTERNATE = parent::REL_ALTERNATE;
-    public const REL_AUTHOR = parent::REL_AUTHOR;
-    public const REL_BOOKMARK = parent::REL_BOOKMARK;
-    public const REL_HELP = parent::REL_HELP;
-    public const REL_LICENSE = parent::REL_LICENSE;
-    public const REL_NEXT = parent::REL_NEXT;
-    public const REL_NOFOLLOW = parent::REL_NOFOLLOW;
-    public const REL_NOREFERRER = parent::REL_NOREFERRER;
-    public const REL_PREV = parent::REL_PREV;
-    public const REL_SEARCH = parent::REL_SEARCH;
-    public const REL_TAG = parent::REL_TAG;
-    public const SHAPE = parent::SHAPE;
-    public const SHAPE_DEFAULT = parent::SHAPE_DEFAULT;
-    public const SHAPE_RECT = parent::SHAPE_RECT;
-    public const SHAPE_CIRCLE = parent::SHAPE_CIRCLE;
-    public const SHAPE_POLY = parent::SHAPE_POLY;
-    public const TARGET = parent::TARGET;
-    public const TARGET_BLANK = parent::TARGET_BLANK;
-    public const TARGET_PARENT = parent::TARGET_PARENT;
-    public const TARGET_SELF = parent::TARGET_SELF;
-    public const TARGET_TOP = parent::TARGET_TOP;
-    public const TYPE = parent::TYPE;
+    public const ALT                = Attr::ALT;
+    public const COORDS             = Attr::COORDS;
+    public const DOWNLOAD           = Attr::DOWNLOAD;
+    public const HREF               = Attr::HREF;
+    public const HREFLANG           = Attr::HREFLANG;
+    public const MEDIA              = Attr::MEDIA;
+    public const REL                = Attr::REL;
+    public const REL_ALTERNATE      = Attr::REL_ALTERNATE;
+    public const REL_AUTHOR         = Attr::REL_AUTHOR;
+    public const REL_BOOKMARK       = Attr::REL_BOOKMARK;
+    public const REL_HELP           = Attr::REL_HELP;
+    public const REL_LICENSE        = Attr::REL_LICENSE;
+    public const REL_NEXT           = Attr::REL_NEXT;
+    public const REL_NOFOLLOW       = Attr::REL_NOFOLLOW;
+    public const REL_NOREFERRER     = Attr::REL_NOREFERRER;
+    public const REL_PREV           = Attr::REL_PREV;
+    public const REL_SEARCH         = Attr::REL_SEARCH;
+    public const REL_TAG            = Attr::REL_TAG;
+    public const SHAPE              = Attr::SHAPE;
+    public const SHAPE_DEFAULT      = Attr::SHAPE_DEFAULT;
+    public const SHAPE_RECT         = Attr::SHAPE_RECT;
+    public const SHAPE_CIRCLE       = Attr::SHAPE_CIRCLE;
+    public const SHAPE_POLY         = Attr::SHAPE_POLY;
+    public const TARGET             = Attr::TARGET;
+    public const TARGET_BLANK       = Attr::TARGET_BLANK;
+    public const TARGET_PARENT      = Attr::TARGET_PARENT;
+    public const TARGET_SELF        = Attr::TARGET_SELF;
+    public const TARGET_TOP         = Attr::TARGET_TOP;
+    public const TYPE               = Attr::TYPE;
     protected $name = 'area';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
@@ -84,24 +94,38 @@ class Area extends HTMLElement {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+
+    /* 
     public function attrAlt($alt){
         $this->appendAttribut([self::ALT => $alt]);
     }
+    */
+    /*    
     public function attrCoords($coords){
         $this->appendAttribut([self::COORDS => $coords]);
     }
+    */
+    /*
     public function attrDownload($filepath) {
         $this->appendAttribut([self::DOWNLOAD => $filepath]);
     }
+    */
+    /*
     public function attrHref($url){
         $this->appendAttribut([self::HREF => $url]);
     }
+    */
+    /*
     public function attrHreflang($languagecode){
         $this->appendAttribut([self::HREFLANG => $languagecode]);
     }
+    */
+    /*
     public function attrMedia($media){
         $this->appendAttribut([self::MEDIA => $media]);
     }
+    */
+    /*
     public function attrRel(string $rel){
         $this->appendAttribut([self::REL => $rel]);
     }
@@ -138,6 +162,8 @@ class Area extends HTMLElement {
     public function attrRelTag() {
         $this->attrRel(self::REL_TAG);
     }
+    */
+    /*
     public function attrShape(string $shape){
         $this->appendAttribut([self::SHAPE => $shape]);
     }  
@@ -153,6 +179,8 @@ class Area extends HTMLElement {
     public function attrShapePoly() {
         $this->attrShape(self::SHAPE_POLY);
     }
+    */
+    /*
     public function attrTarget(string $target){
         $this->appendAttribut([self::TARGET => $target]);
     }
@@ -168,7 +196,10 @@ class Area extends HTMLElement {
     public function attrTargetTop() {
         $this->attrTarget(self::TARGET_TOP);
     }
+    */
+    /*    
     public function attrType($type){
         $this->appendAttribut([self::TYPE => $type]);
-    }   
+    }
+    */
 }

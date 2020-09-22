@@ -3,15 +3,22 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{Attr};
+use tekki\core\html\attr\{Async, Charset, Defer, Src, Type};
 class Script extends HTMLElement {
-    
-    public const ASYNC = 'async';
-    public const CHARSET = 'charset';
-    public const DEFER = 'defer';
-    public const SRC = 'src';
-    public const TYPE = 'type';
+    use Async;
+    use Charset;
+    use Defer;
+    use Src;
+    use Type;
+    public const ASYNC                  = Attr::ASYNC;
+    public const CHARSET                = Attr::CHARSET;
+    public const DEFER                  = Attr::DEFER;
+    public const SRC                    = Attr::SRC;
+    public const TYPE                   = Attr::TYPE;
+    public const TYPE_TEXT_JAVASCRIPT   = Attr::TYPE_TEXT_JAVASCRIPT;
     protected $name = 'script';
-
     /*
     async	async	Specifies that the script is executed asynchronously (only for external scripts)
 charset	charset	Specifies the character encoding used in an external script file
@@ -25,6 +32,7 @@ type	media_type	Specifies the media type of the script
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+    /*
     public function attrAsync(bool $async) {
         //	async
         //		Specifies that the script is executed asynchronously (only for external scripts)
@@ -55,7 +63,7 @@ type	media_type	Specifies the media type of the script
         //	    media_type
         $this->appendAttribut([self::TYPE => $type]);
     }
-
+*/
 
     public function includeJS(string $filepath, string $mode = null){
         // @param string|null $mode = 'async'|'defer'

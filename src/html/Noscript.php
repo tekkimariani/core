@@ -3,6 +3,7 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
+use tekki\core\html\dom\HTMLElement;
 class Noscript extends HTMLElement {
     protected $name = 'noscript';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
@@ -12,16 +13,16 @@ class Noscript extends HTMLElement {
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
 
-    //a
-    /*
-    public function a(array $attr = [], string $content = null){
+    //link
+    public function link(array $attr = [], string $content = null){
         $this->console->log(__METHOD__);
-        return new A($this->doc, $this->element, $attr, $content);
+        return new link($this->doc, $this->element, $attr, $content);
     }
-    */
-    //br
-    public function br(array $attr = [], string $content = null){
+    
+    //meta
+    public function meta(array $attr = [], string $content = null){
         $this->console->log(__METHOD__);
-        return new Br($this->doc, $this->element);
+        return new Meta($this->doc, $this->element);
     }
+    
 }

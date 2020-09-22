@@ -3,7 +3,12 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Colgroup extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes, Attr};
+use tekki\core\html\attr\{Span};
+class Colgroup extends HTMLElement {
+    use EventAttributes;
+    use Span;
     /*
     //  The <colgroup> tag specifies a group of one or more columns in a table for formatting.
     //
@@ -16,7 +21,7 @@ class Colgroup extends HTMLElementEvent {
     /*
     // span	number	Specifies the number of columns a column group should span
     */
-    public const SPAN = parent::SPAN;
+    public const SPAN = Attr::SPAN;
     protected $name = 'colgroup';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
@@ -24,9 +29,11 @@ class Colgroup extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+    /*
     public function attrSpan(int $col){
         $this->appendAttribut([self::SPAN => $col]);
     }
+    */
     /*
 	//	Contexts in which this element can be used:
     //	As a child of a colgroup element that doesn't have a span attribute.

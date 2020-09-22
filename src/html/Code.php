@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Code extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class Code extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  The <code> tag is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font.
     //
@@ -16,5 +20,5 @@ class Code extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
+    
 }

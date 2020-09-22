@@ -3,7 +3,9 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
+use tekki\core\html\dom\HTMLElement;
 class Title extends HTMLElement {
+    // Only uses global attributes.
     /*
     //  Definition and Usage
     //  The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.

@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class B extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class B extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  Note: According to the HTML5 specification, the <b> tag should be used as a LAST resort
     //  when no other tag is more appropriate. The specification states that headings should be
@@ -19,5 +23,5 @@ class B extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
+    
 }

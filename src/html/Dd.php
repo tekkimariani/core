@@ -3,7 +3,10 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Dd extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class Dd extends HTMLElement {
+    use EventAttributes;
     /*
     //  The <dd> tag is used to describe a term/name in a description list.
     //

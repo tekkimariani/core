@@ -3,7 +3,18 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Audio extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{GlobalAttributes, EventAttributes, Attr};
+use tekki\core\html\attr\{Autoplay, Controls, Loop, Muted, Preload, Src};
+class Audio extends HTMLElement {
+    use GlobalAttributes;
+    use EventAttributes;
+    use Autoplay;
+    use Controls;
+    use Loop;
+    use Muted;
+    use Preload;
+    use Src;
     /*
     autoplay	autoplay	Specifies that the audio will start playing as soon as it is ready
     controls	controls	Specifies that audio controls should be displayed (such as a play/pause button etc)
@@ -14,15 +25,15 @@ class Audio extends HTMLElementEvent {
     none	Specifies if and how the author thinks the audio should be loaded when the page loads
     src	URL	Specifies the URL of the audio file
     */
-    public const AUTOPLAY = parent::AUTOPLAY;
-    public const CONTROLS = parent::CONTROLS;
-    public const LOOP = parent::LOOP;
-    public const MUTED = parent::MUTED;
-    public const PRELOAD = parent::PRELOAD;
-    public const PRELOAD_AUTO = parent::PRELOAD_AUTO;
-    public const PRELOAD_METADATA = parent::PRELOAD_METADATA;
-    public const PRELOAD_NONE = parent::PRELOAD_NONE;
-    public const SRC = parent::SRC;
+    public const AUTOPLAY           = Attr::AUTOPLAY;
+    public const CONTROLS           = Attr::CONTROLS;
+    public const LOOP               = Attr::LOOP;
+    public const MUTED              = Attr::MUTED;
+    public const PRELOAD            = Attr::PRELOAD;
+    public const PRELOAD_AUTO       = Attr::PRELOAD_AUTO;
+    public const PRELOAD_METADATA   = Attr::PRELOAD_METADATA;
+    public const PRELOAD_NONE       = Attr::PRELOAD_NONE;
+    public const SRC                = Attr::SRC;
     protected $name = 'audio';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
@@ -30,31 +41,43 @@ class Audio extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
+    /*
     public function attrAutoplay(){
-        $this->appendAttribut([self::AUTOPLAY => null]);
+        $this->appendAttribut([Attr::AUTOPLAY => null]);
     }
+    */
+    /*
     public function attrControls(){
-        $this->appendAttribut([self::CONTROLS => null]);
+        $this->appendAttribut([Attr::CONTROLS => null]);
     }
+    */
+    /*
     public function attrLoop(){
-        $this->appendAttribut([self::LOOP => null]);
+        $this->appendAttribut([Attr::LOOP => null]);
     }
+    */
+    /*
     public function attrMuted(){
-        $this->appendAttribut([self::MUTED => null]);
+        $this->appendAttribut([Attr::MUTED => null]);
     }
+    */
+    /*
     public function attrPreload($value){
-        $this->appendAttribut([self::PRELOAD => $value]);
+        $this->appendAttribut([Attr::PRELOAD => $value]);
     }
     public function attrPreloadAuto(){
-        $this->attrPreload(self::PRELOAD_AUTO);
+        $this->attrPreload(Attr::PRELOAD_AUTO);
     }
     public function attrPreloadMetadata(){
-        $this->attrPreload(self::PRELOAD_METADATA);
+        $this->attrPreload(Attr::PRELOAD_METADATA);
     }
     public function attrPreloadNone(){
-        $this->attrPreload(self::PRELOAD_NONE);
+        $this->attrPreload(Attr::PRELOAD_NONE);
     }
+    */
+    /*
     public function attrSrc($url){
-        $this->appendAttribut([self::SRC => $url]);
+        $this->appendAttribut([Attr::SRC => $url]);
     }
+    */
 }

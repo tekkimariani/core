@@ -4,10 +4,10 @@ use \DOMDocument;
 use \DOMElement;
 use FirePHP;
 use tekki\core\html\dom\HTMLElement;
-use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+use tekki\core\html\attr\{EventAttributes};
 class Aside extends HTMLElement {
-    use GlobalAttributes;
     use EventAttributes;
+    // Only uses global attributes.
     /*
     */
     protected $name = 'aside';
@@ -17,5 +17,5 @@ class Aside extends HTMLElement {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
+    
 }

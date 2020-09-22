@@ -5,7 +5,7 @@ use \DOMElement;
 use \DOMComment;
 use FirePHP;
 use tekki\core\html\{
-    A, Abbr, Address, Area, Article, Aside, Audio, B, Base, Bdi, Bdo, Blockquote,
+    _Object, A, Abbr, Address, Area, Article, Aside, Audio, B, Base, Bdi, Bdo, Blockquote,
     Body, Br, Button, Canvas, Caption, Cite, Code, Col, Colgroup, Data, Datalist, Dd, Del,
     Details, Dfn, Dialog, Div, Dl, Dt, Em, Embed, Fieldset, Figcaption, Figure, Footer, Form,
     H1, H2, H3, H4, H5, H6, Head, Header, Hr, HTML, I, Iframe, Img, Input, Ins, Kbd, Keygen,
@@ -14,7 +14,32 @@ use tekki\core\html\{
     Source, Span, Strong, Style, Sub, Summary, Sup, Svg, Table, Tbody, Td, Template, Textarea,
     Tfoot, Th, Thead, Time, Title, Tr, Track, U, Ul, Variable, Video, Wbr
 };
-class HTMLElement extends HTMLAttr{
+use tekki\core\html\attr\{GlobalAttributes, Attr};
+class HTMLElement {
+	use GlobalAttributes;
+	public const ACCESSKEY 				= Attr::ACCESSKEY;
+	public const _CLASS 				= Attr::_CLASS;
+	public const CONTENTEDITABLE 		= Attr::CONTENTEDITABLE;
+	public const CONTENTEDITABLE_TRUE 	= Attr::CONTENTEDITABLE_TRUE;
+	public const CONTENTEDITABLE_FALSE 	= Attr::CONTENTEDITABLE_FALSE;
+	public const DIR 					= Attr::DIR;
+	public const DIR_LTR 				= Attr::DIR_LTR;
+	public const DIR_RTL 				= Attr::DIR_RTL;
+	public const DIR_AUTO 				= Attr::DIR_AUTO;
+	public const DRAGGABLE 				= Attr::DRAGGABLE;
+	public const DRAGGABLE_TRUE 		= Attr::DRAGGABLE_TRUE;
+	public const DRAGGABLE_FALSE 		= Attr::DRAGGABLE_FALSE;
+	public const DRAGGABLE_AUTO 		= Attr::DRAGGABLE_AUTO;
+	public const HIDDEN 				= Attr::HIDDEN;
+	public const ID 					= Attr::ID;
+	public const LANG 					= Attr::LANG;
+	public const SPELLCHECK 			= Attr::SPELLCHECK;
+	public const SPELLCHECK_TRUE 		= Attr::SPELLCHECK_TRUE;
+	public const SPELLCHECK_FALSE 		= Attr::SPELLCHECK_FALSE;
+	public const STYLE 					= Attr::STYLE;
+	public const TABINDEX 				= Attr::TABINDEX;
+	public const TITLE 					= Attr::TITLE;
+	public const TRANSLATE 				= Attr::TRANSLATE;
     protected ?DOMDocument $doc = null;
 	protected ?DOMElement $element = null;
 	protected $name;
@@ -109,7 +134,7 @@ class HTMLElement extends HTMLAttr{
         return $this->element;
 	}
 	
-
+	/*
 	// #######################################################
 	// Global Attributes that can be within every HTML Element
 	// #######################################################
@@ -276,6 +301,7 @@ class HTMLElement extends HTMLAttr{
 		//		<element translate="yes|no">
 		$this->appendAttribut([self::TRANSLATE => ($bool ? 'yes' : 'no')]);
 	}
+	*/
 
 	//
 	//	Da es nicht möglich ist in PHP die Klassen mit den Namen 'Object' oder 'Var' anzulegen,
@@ -291,9 +317,11 @@ class HTMLElement extends HTMLAttr{
 	//	Bei Var:
 	//		However, it is possible to achieve richer effect by using CSS.
 	//
+	/*
 	public function _object(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
 		return new HTMLElementEvent('object', $doc, $container, $attr, $content);
 	}
+	*/
 	/*
 	<var> wird in der Klasse Variable behandelt.
 	public function _var(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
@@ -554,11 +582,13 @@ class HTMLElement extends HTMLAttr{
     public function kbd(array $attr = [], string $value = null){
     	$this->console->log(__METHOD__);
     	return new Kbd($this->doc, $this->element, $attr, $value);
-    }
+	}
+	/*
     public function keygen(array $attr = [], string $value = null){
     	$this->console->log(__METHOD__);
     	return new Keygen($this->doc, $this->element, $attr, $value);
-    }
+	}
+	*/
     public function label(array $attr = [], string $value = null){
     	$this->console->log(__METHOD__);
     	return new Label($this->doc, $this->element, $attr, $value);
@@ -621,7 +651,7 @@ class HTMLElement extends HTMLAttr{
     }
     public function object(array $attr = [], string $value = null){
     	$this->console->log(__METHOD__);
-    	return $this->_object($this->doc, $this->element, $attr, $value);
+    	return new _Object($this->doc, $this->element, $attr, $value);
     }
     public function ol(array $attr = [], string $value = null){
     	$this->console->log(__METHOD__);

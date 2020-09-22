@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Caption extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class Caption extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  The <caption> tag defines a table caption.
     //
@@ -22,5 +26,5 @@ class Caption extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
+    
 }

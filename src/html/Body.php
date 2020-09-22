@@ -4,9 +4,10 @@ use \DOMDocument;
 use \DOMElement;
 use FirePHP;
 use tekki\core\html\dom\HTMLElement;
-use tekki\core\html\attr\{GlobalAttributes};
-
+use tekki\core\html\attr\{EventAttributes};
 class Body extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  The <body> tag defines the document's body.
     //
@@ -22,5 +23,4 @@ class Body extends HTMLElement {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
 }

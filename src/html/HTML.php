@@ -24,9 +24,4 @@ class HTML extends HTMLElement {
         $this->console->log(__METHOD__);
         return new Body($this->doc, $this->element, $attr, $value);
     }
-    // Attribute
-    //      Lang
-    public function lang($languageCode){
-        $this->attrLang($languageCode);
-    }
 }

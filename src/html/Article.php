@@ -4,10 +4,10 @@ use \DOMDocument;
 use \DOMElement;
 use FirePHP;
 use tekki\core\html\dom\HTMLElement;
-use tekki\core\html\attr\{GlobalAttributes, EventAttributes};
+use tekki\core\html\attr\{EventAttributes};
 class Article extends HTMLElement {
-    use GlobalAttributes;
     use EventAttributes;
+    // Only uses global attributes.
     /*
 Definition and Usage
 The <article> tag specifies independent, self-contained content.
@@ -39,5 +39,4 @@ The <article> tag also supports the Event Attributes in HTML.
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
 }

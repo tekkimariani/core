@@ -1,6 +1,7 @@
 <?php
 namespace tekki\core\html\attr;
 class Attr{
+    public const ABBR = 'abbr';
     #accept	<input>	Specifies the types of files that the server accepts (only for type="file")
     public const ACCEPT = 'accept';
     #accept-charset	<form>	Specifies the character encodings that are to be used for the form submission
@@ -11,6 +12,13 @@ class Attr{
     public const ACTION = 'action';
     #align	Not supported in HTML 5.	Specifies the alignment according to surrounding elements. Use CSS instead
     #Not supported
+    public const ALLOW = 'allow';
+    public const ALLOWFULLSCREEN = 'allowfullscreen';
+    public const ALLOWFULLSCREEN_TRUE = 'true';
+    public const ALLOWFULLSCREEN_FALSE = 'false';
+    public const ALLOWPAYMENTREQUEST = 'allowpaymentrequest';
+    public const ALLOWPAYMENTREQUEST_TRUE = 'true';
+    public const ALLOWPAYMENTREQUEST_FALSE = 'false';
     #alt	<area>, <img>, <input>	Specifies an alternate text when the original element fails to display
     public const ALT = 'alt';
     #async	<script>	Specifies that the script is executed asynchronously (only for external scripts)
@@ -31,6 +39,7 @@ class Attr{
     public const CHALLENGE = 'challenge';
     #charset	<meta>, <script>	Specifies the character encoding
     public const CHARSET = 'charset';
+    public const CHARSET_UTF_8 = 'UTF-8';
     #checked	<input>	Specifies that an <input> element should be pre-selected when the page loads (for type="checkbox" or type="radio")
     public const CHECKED = 'checked';
     #cite	<blockquote>, <del>, <ins>, <q>	Specifies a URL which explains the quote/deleted/inserted text
@@ -111,6 +120,8 @@ class Attr{
     public const FORMTARGET_SELF = '_self';
     public const FORMTARGET_PARENT = '_parent';
     public const FORMTARGET_TOP = '_top';
+
+    public const FROM = 'from';
     #headers	<td>, <th>	Specifies one or more headers cells a cell is related to
     public const HEADERS = 'headers';
     #height	<canvas>, <embed>, <iframe>, <img>, <input>, <object>, <video>	Specifies the height of the element
@@ -126,6 +137,10 @@ class Attr{
     public const HREFLANG = 'hreflang';
     #http-equiv	<meta>	Provides an HTTP header for the information/value of the content attribute
     public const HTTP_EQUIV = 'http-equiv';
+    public const HTTP_EQUIV_CONTENT_SECURITY_POLICY = 'content-security-policy';
+    public const HTTP_EQUIV_CONTENT_TYPE = 'content-type';
+    public const HTTP_EQUIV_DEFAULT_STYLE = 'default-style';
+    public const HTTP_EQUIV_REFRESH = 'refresh';
     #id	Global Attributes	Specifies a unique id for an element
     public const ID = 'id';
     #ismap	<img>	Specifies an image as a server-side image-map
@@ -134,6 +149,11 @@ class Attr{
     public const KEYTYPE = 'keytype';
     #kind	<track>	Specifies the kind of text track
     public const KIND = 'kind';
+    public const KIND_CAPTIONS = 'captions';
+    public const KIND_CHAPTERS = 'chapters';
+    public const KIND_DESCRIPTIONS = 'descriptions';
+    public const KIND_METADATA = 'metadata';
+    public const KIND_SUBTITLES = 'subtitles';
     #label	<track>, <option>, <optgroup>	Specifies the title of the text track
     public const LABEL = 'label';
     #lang	Global Attributes	Specifies the language of the element's content
@@ -158,14 +178,19 @@ class Attr{
     public const METHOD_GET = 'get';
     #min	<input>, <meter>	Specifies a minimum value
     public const MIN = 'min';
+    public const MINLENGTH = 'minlenght';
     #multiple	<input>, <select>	Specifies that a user can enter more than one value
     public const MULTIPLE = 'multible';
     #muted	<video>, <audio>	Specifies that the audio output of the video should be muted
     public const MUTED = 'muted';
     #name	<button>, <fieldset>, <form>, <iframe>, <input>, <keygen>, <map>, <meta>, <object>, <output>, <param>, <select>, <textarea>	Specifies the name of the element
     public const NAME = 'name';
-
-    public const META_NAME_APPLICATION = 'application-name';
+    public const NAME_APPLICATION_NAME = 'application-name';
+    public const NAME_AUTHOR = 'author';
+    public const NAME_DESCRIPTION = 'description';
+    public const NAME_GENERATOR = 'generator';
+    public const NAME_KEYWORDS = 'keywords';
+    public const NAME_VIEWPORT = 'viewport';
     #novalidate	<form>	Specifies that the form should not be validated when submitted
     public const NOVALIDATE = 'novalidate';
     #onabort	<audio>, <embed>, <img>, <object>, <video>	Script to be run on abort
@@ -334,6 +359,9 @@ class Attr{
     public const REFERRERPOLICY_NO_REFERRER_WHEN_DOWNGRADE = 'no-referrer-when-downgrade';
     public const REFERRERPOLICY_ORIGIN = 'origin';
     public const REFERRERPOLICY_ORIGIN_WHEN_CROSS_ORIGIN = 'origin-when-cross-origin';
+    public const REFERRERPOLICY_SAME_ORIGIN = 'same-origin';
+    public const REFERRERPOLICY_STRICT_ORIGIN = 'strict-origin';
+    public const REFERRERPOLICY_STRICT_ORIGIN_WHEN_CROSS_ORIGIN = 'strict-origin-when-cross-origin';
     public const REFERRERPOLICY_UNSAFE_URL = 'unsafe-url';
 
     #rel	<a>, <area>, <link>	Specifies the relationship between the current document and the linked document
@@ -341,16 +369,24 @@ class Attr{
     public const REL_ALTERNATE = 'alternate';
     public const REL_AUTHOR = 'author';
     public const REL_BOOKMARK = 'bookmark';
+    public const REL_DNS_PREFETCH = 'dns-prefetch';
     public const REL_EXTERNAL = 'external';
     public const REL_HELP = 'help';
+    public const REL_ICON = 'icon';
     public const REL_LICENSE = 'license';
     public const REL_NEXT = 'next';
     public const REL_NOFOLLOW = 'nofollow';
     public const REL_NOOPENER = 'noopener';
     public const REL_NOREFERRER = 'noreferrer';
     public const REL_OPENER = 'opener';
+    public const REL_PINGBACK = 'pingback';
+    public const REL_PRECONNECT = 'preconnect';
+    public const REL_PREFETCH = 'prefetch';
+    public const REL_PRELOAD = 'preload';
+    public const REL_PRERENDER = 'prerender';
     public const REL_PREV = 'prev';
     public const REL_SEARCH = 'search';
+    public const REL_STYLESHEET = 'stylesheet';
     public const REL_TAG = 'tag';
     #required	<input>, <select>, <textarea>	Specifies that the element must be filled out before submitting the form
     public const REQUIRED = 'required';
@@ -362,8 +398,23 @@ class Attr{
     public const ROWSPAN = 'rowspan';
     #sandbox	<iframe>	Enables an extra set of restrictions for the content in an <iframe>
     public const SANDBOX = 'sandbox';
+    public const SANDBOX_ALLOW_FORMS = 'allow-forms';
+    public const SANDBOX_ALLOW_MODALS = 'allow-modals';
+    public const SANDBOX_ALLOW_ORIENTATION_LOCK = 'allow-orientation-lock';
+    public const SANDBOX_ALLOW_POINTER_LOCK = 'allow-pointer-lock';
+    public const SANDBOX_ALLOW_POPUPS = 'allow-popups';
+    public const SANDBOX_ALLOW_POPUPS_TO_ESCAPE_SANDBOX = 'allow-popups-to-escape-sandbox';
+    public const SANDBOX_ALLOW_PRESENTATION = 'allow-presentation';
+    public const SANDBOX_ALLOW_SAME_ORIGIN = 'allow-same-origin';
+    public const SANDBOX_ALLOW_SCRIPTS = 'allow-scripts';
+    public const SANDBOX_ALLOW_TOP_NAVIGATION = 'allow-top-navigation';
+    public const SANDBOX_ALLOW_TOP_NAVIGATION_BY_USER_ACTIVATION = 'allow-top-navigation-by-user-activation';
     #scope	<th>	Specifies whether a header cell is a header for a column, row, or group of columns or rows
     public const SCOPE = 'scope';
+    public const SCOPE_COL = 'col';
+    public const SCOPE_COLGROUP = 'colgroup';
+    public const SCOPE_ROW = 'row';
+    public const SCOPE_ROWGROUP = 'rowgroup';
     #scoped	<style>	Specifies that the styles only apply to this element's parent element and that element's child elements
     public const SCOPED = 'scoped';
     #selected	<option>	Specifies that an option should be pre-selected when the page loads
@@ -427,6 +478,7 @@ class Attr{
     public const TYPE_FILE = 'file';
     public const TYPE_HIDDEN = 'hidden';
     public const TYPE_IMAGE = 'image';
+    public const TYPE_IMAGE_JPG = 'image/jpg';
     public const TYPE_MONTH = 'month';
     public const TYPE_NUMBER = 'number';
     public const TYPE_PASSWORD = 'password';
@@ -439,11 +491,17 @@ class Attr{
     public const TYPE_URL = 'url';
     public const TYPE_WEEK = 'week';
     public const TYPE_TEXT_CSS = 'text/css';
+    public const TYPE_TEXT_HTML = 'text/html';
+    public const TYPE_TEXT_JAVASCRIPT = 'text/javascript';
     public const TYPE_LIST = 'list';
     public const TYPE_TOOLBAR = 'toolbar';
     public const TYPE_CONTEXT = 'context';
     public const TYPE_SUBMIT = 'submit';
+    public const TYPE_VIDEO_WEBM = 'video/webm';
 
+    public const TYPEMUSTMATCH = 'typemustmatch';
+    public const TYPEMUSTMATCH_FALSE = 'false';
+    public const TYPEMUSTMATCH_TRUE = 'true';
     #usemap	<img>, <object>	Specifies an image as a client-side image-map
     public const USEMAP = 'usemap';
     #value	<button>, <input>, <li>, <option>, <meter>, <progress>, <param>	Specifies the value of the element
@@ -452,4 +510,6 @@ class Attr{
     public const WIDTH = 'width';
     #wrap	<textarea>	Specifies how the text in a text area is to be wrapped when submitted in a form
     public const WRAP = 'wrap';
+    public const WRAP_HARD = 'hard';
+    public const WRAP_SOFT = 'soft';
 }

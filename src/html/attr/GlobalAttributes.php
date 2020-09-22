@@ -1,7 +1,6 @@
 <?php
 namespace tekki\core\html\attr;
 trait GlobalAttributes{
-    /*
     use Accesskey;
     use _Class;
     use Contenteditable;
@@ -15,7 +14,12 @@ trait GlobalAttributes{
     use Tabindex;
     use Title;
     use Translate;
+    /*  
+    
+
+
     */
+    /*
     public function attrAccesskey(string $character) {
 		//	accesskey
 		//		Specifies a shortcut key to activate/focus an element
@@ -23,8 +27,8 @@ trait GlobalAttributes{
 		//		A single character that specifies the shortcut key to activate/focus the element
 		$this->appendAttribut([Attr::ACCESSKEY => $character]);
 	}
-
-
+    */
+    /* 
 	public function attrClass($classname) {
 		//	class
 		//		Specifies one or more classnames for an element (refers to a class in a style sheet)
@@ -37,8 +41,8 @@ trait GlobalAttributes{
 		//		Can be followed by: letters (A-Za-z), digits (0-9), hyphens ("-"), and underscores ("_")
 		$this->appendAttribut([Attr::_CLASS => $classname]);
 	}
-
-
+    */
+    /*
 	public function attrContenteditable(bool $contenteditable) {
 		//	contenteditable
 		//		Specifies whether the content of an element is editable or not
@@ -53,8 +57,8 @@ trait GlobalAttributes{
 	public function attrContenteditableFalse(){
 		$this->attrContenteditable(false);
 	}
-
-
+    */
+    /*
 	public function attrDataCustom(string $name, string $value) {
 		//	data-*
 		//		Used to store custom data private to the page or application
@@ -62,8 +66,8 @@ trait GlobalAttributes{
 		//		The attribute value can be any string
 		$this->appendAttribut(['data-'.$name => $value]);
 	}
-
-
+    */
+    /*
 	public function attrDir(string $direction) {
 		//	dir
 		//		Specifies the text direction for the content in an element
@@ -82,8 +86,8 @@ trait GlobalAttributes{
 	public function attrDirAuto(){
 		$this->attrDir(Attr::DIR_AUTO);
 	}
-
-
+    */
+    /*
 	public function attrDraggable(string $mode) {
 		//	draggable
 		//		Specifies whether an element is draggable or not
@@ -91,7 +95,7 @@ trait GlobalAttributes{
 		//		true	Specifies that the element is draggable
 		//		false	Specifies that the element is not draggable
 		//		auto	Uses the default behavior of the browser
-		$this->appendAttribut(['draggable' => $mode]);
+		$this->appendAttribut([Attr::DRAGGABLE => $mode]);
 	}
 	public function attrDraggableTrue() {
 		$this->attrDraggable(Attr::DRAGGABLE_TRUE);
@@ -102,14 +106,16 @@ trait GlobalAttributes{
 	public function attrDraggableAuto() {
 		$this->attrDraggable(Attr::DRAGGABLE_AUTO);
 	}
-
-
+    */
+    /*
 	public function attrHidden() {
 		//	hidden
 		//		Specifies that an element is not yet, or is no longer, relevant
 		//		<element hidden>
 		$this->appendAttribut([Attr::HIDDEN => null]);
-	}
+    }
+    */
+    /*
 	public function attrId($id) {
 		//	id
 		//		Specifies a unique id for the element.
@@ -118,16 +124,16 @@ trait GlobalAttributes{
 		//		Must not contain any space characters
 		$this->appendAttribut([Attr::ID => $id]);
 	}
-
-
+    */
+    /*
 	public function attrLang($code) {
 		//	lang
 		//		Specifies the language of the element's content
 		//		<element lang="language_code">
 		$this->appendAttribut([Attr::LANG => $code]);
 	}
-
-
+    */
+    /*
 	public function attrSpellcheck(bool $bool) {
 		//	spellcheck
 		//		Specifies whether the element is to have its spelling and grammar checked or not
@@ -144,8 +150,8 @@ trait GlobalAttributes{
 	public function attrSpellcheckFalse(){
 		$this->attrSpellcheck(false);
 	}
-
-
+    */
+    /*
 	public function attrStyle(string $style) {
 		//	style
 		//		Specifies an inline CSS style for an element
@@ -153,28 +159,29 @@ trait GlobalAttributes{
 		//		One or more CSS properties and values separated by semicolons (e.g. style="color:blue;text-align:center")
 		$this->appendAttribut([Attr::STYLE => $style]);
 	}
-
-
+    */
+    /*
 	public function attrTabindex(int $number) {
 		//	tabindex
 		//		Specifies the tabbing order of an element
 		//		<element tabindex="number">
 		$this->appendAttribut([Attr::TABINDEX => $number]);
 	}
-
-
+    */
+    /*
 	public function attrTitle(string $text) {
 		//	title
 		//		Specifies extra information about an element
 		//		<element title="text">
 		$this->appendAttribut([Attr::TITLE => $text]);
 	}
-
-
+    */
+    /*
 	public function attrTranslate(bool $bool) {
 		//	translate
 		//		Specifies whether the content of an element should be translated or not
 		//		<element translate="yes|no">
 		$this->appendAttribut([Attr::TRANSLATE => ($bool ? 'yes' : 'no')]);
-	}
+    }
+    */
 }

@@ -3,7 +3,11 @@ namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
 use FirePHP;
-class Bdi extends HTMLElementEvent {
+use tekki\core\html\dom\HTMLElement;
+use tekki\core\html\attr\{EventAttributes};
+class Bdi extends HTMLElement {
+    use EventAttributes;
+    // Only uses global attributes.
     /*
     //  BDI stands for Bi-Directional Isolation.
     //
@@ -18,5 +22,5 @@ class Bdi extends HTMLElementEvent {
         $this->console->log(__METHOD__);
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
-    // Only uses global attributes.
+    
 }
