@@ -176,11 +176,11 @@ class Link extends HTMLElement {
         $this->appendAttribut([self::TYPE => $type]);
     }
     */
-    /*
+    
     public function includeCSS(string $filepath){
-        $this->attrRel(self::REL_STYLESHEET);
-        $this->attrType(self::TYPE_TEXT_CSS);
-        $this->attrHref($filepath);
+        $this->setRel(self::REL_STYLESHEET);
+        $this->setType(self::TYPE_TEXT_CSS);
+        $this->setHref($filepath);
     }
-    */
+    
 }
