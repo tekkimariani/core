@@ -52,11 +52,11 @@ class Meta extends HTMLElement {
         $this->appendAttribut([self::CHARSET => $charset]);
     }
     */
-    /*
+    
     public function charset(string $charset = self::CHARSET_UTF_8){
         $this->setCharset($charset);
     }
-    */
+    
     /*
     //  content         text                        Specifies the value associated with the http-equiv or name attribute
     public function attrContent(string $content) {
