@@ -7,7 +7,8 @@ trait GlobalAttributes{
     use DataCustom;
     use Dir;
     use Draggable;
-    use Hidden;
+	use Hidden;
+	use Id;
     use Lang;
     use Spellcheck;
     use Style;
