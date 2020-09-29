@@ -1,7 +1,7 @@
 <?php
 namespace tekki\core\html\attr;
 trait Width{
-    public function setWidth(int $width){
+    public function setWidth(string $width){
         $this->appendAttribut([Attr::WIDTH => $width]);
     }
 }
