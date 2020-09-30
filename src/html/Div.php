@@ -13,7 +13,7 @@ class Div extends HTMLElement {
         /*
 $this->console = FirePHP::getInstance(true);
         $this->console->setEnabled(true);
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
 */
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
@@ -24,7 +24,7 @@ $this->console = FirePHP::getInstance(true);
     //  After dt or dd elements inside div elements that are children of a dl element.
     */
     public function dd(array $attr = [], string $value = null){
-    	$this->console->log(__METHOD__);
+    	// $this->console->log(__METHOD__);
     	return new Dd($this->doc, $this->element, $attr, $value);
 	}
 }

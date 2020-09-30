@@ -27,7 +27,7 @@ class Colgroup extends HTMLElement {
         /*
 $this->console = FirePHP::getInstance(true);
         $this->console->setEnabled(true);
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
 */
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
@@ -41,7 +41,7 @@ $this->console = FirePHP::getInstance(true);
     //	As a child of a colgroup element that doesn't have a span attribute.
     */
     public function col(array $attr = [], string $value = null){
-    	$this->console->log(__METHOD__);
+    	// $this->console->log(__METHOD__);
     	return new Col($this->doc, $this->element, $attr, $value);
 	}
 	

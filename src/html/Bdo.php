@@ -18,7 +18,7 @@ class Bdo extends HTMLElement {
         /*
 $this->console = FirePHP::getInstance(true);
         $this->console->setEnabled(true);
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
 */
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }

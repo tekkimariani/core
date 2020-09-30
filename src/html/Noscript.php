@@ -10,20 +10,20 @@ class Noscript extends HTMLElement {
         /*
 $this->console = FirePHP::getInstance(true);
         $this->console->setEnabled(true);
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
 */
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
 
     //link
     public function link(array $attr = [], string $content = null){
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
         return new link($this->doc, $this->element, $attr, $content);
     }
     
     //meta
     public function meta(array $attr = [], string $content = null){
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
         return new Meta($this->doc, $this->element);
     }
     

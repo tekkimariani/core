@@ -13,7 +13,7 @@ class Table extends HTMLElement {
         /*
 $this->console = FirePHP::getInstance(true);
         $this->console->setEnabled(true);
-        $this->console->log(__METHOD__);
+        // $this->console->log(__METHOD__);
 */
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
@@ -26,7 +26,7 @@ $this->console = FirePHP::getInstance(true);
     //  HTML5  Standard: https://www.w3.org/TR/html50/tabular-data.html#the-caption-element
     */
     public function caption(array $attr = [], string $value = null){
-    	$this->console->log(__METHOD__);
+    	// $this->console->log(__METHOD__);
     	return new caption($this->doc, $this->element, $attr, $value);
     }
     /*
@@ -36,7 +36,7 @@ $this->console = FirePHP::getInstance(true);
     //  HTML5  Standard: https://www.w3.org/TR/html50/tabular-data.html#the-colgroup-element
     */
     public function colgroup(array $attr = [], string $value = null){
-    	$this->console->log(__METHOD__);
+    	// $this->console->log(__METHOD__);
     	return new Colgroup($this->doc, $this->element, $attr, $value);
 	}
 	
