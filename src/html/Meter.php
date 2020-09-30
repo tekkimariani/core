@@ -24,9 +24,11 @@ class Meter extends HTMLElement {
     public const VALUE      = Attr::VALUE;
     protected $name = 'meter';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
-        $this->console = FirePHP::getInstance(true);
-        $this->console->setEnabled(false);
+        /*
+$this->console = FirePHP::getInstance(true);
+        $this->console->setEnabled(true);
         $this->console->log(__METHOD__);
+*/
         parent::__construct($this->name, $doc, $container, $attr, $content);
     }
 }
