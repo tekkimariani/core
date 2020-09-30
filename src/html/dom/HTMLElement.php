@@ -45,7 +45,7 @@ class HTMLElement {
 	protected $name;
 	public function __construct($name, DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
         $this->console = FirePHP::getInstance(true);
-        $this->console->setEnabled(true);
+        $this->console->setEnabled(false);
 		$this->console->log(__METHOD__);
 		if($doc instanceof DOMDocument){
 			$this->console->log(__METHOD__.': old $doc');
