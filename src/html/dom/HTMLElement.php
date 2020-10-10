@@ -55,7 +55,8 @@ class HTMLElement {
 		}
         if(!$this->doc instanceof DOMDocument){
 			// $this->console->log(__METHOD__.': new $doc');
-            $this->doc = new DOMDocument();
+			$this->doc = new DOMDocument();
+			
 		}
         $this->element = $this->create($name, $container, $attr, $content); 		
 	}

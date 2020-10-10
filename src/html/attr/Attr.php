@@ -169,7 +169,7 @@ class Attr{
     #max	<input>, <meter>, <progress>	Specifies the maximum value
     public const MAX = 'max';
     #maxlength	<input>, <textarea>	Specifies the maximum number of characters allowed in an element
-    public const MAXLENGTH = 'maxlenght';
+    public const MAXLENGTH = 'maxlength';
     #media	<a>, <area>, <link>, <source>, <style>	Specifies what media/device the linked document is optimized for
     public const MEDIA = 'media';
     #method	<form>	Specifies the HTTP method to use when sending form-data
@@ -178,7 +178,7 @@ class Attr{
     public const METHOD_GET = 'get';
     #min	<input>, <meter>	Specifies a minimum value
     public const MIN = 'min';
-    public const MINLENGTH = 'minlenght';
+    public const MINLENGTH = 'minlength';
     #multiple	<input>, <select>	Specifies that a user can enter more than one value
     public const MULTIPLE = 'multible';
     #muted	<video>, <audio>	Specifies that the audio output of the video should be muted
