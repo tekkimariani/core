@@ -7,6 +7,6 @@ trait Id{
 		//		Naming rules:
 		//		Must contain at least one character
 		//		Must not contain any space characters
-		$this->appendAttribut([Attr::ID => $id]);
+		return $this->appendAttribut([Attr::ID => $id]);
 	}
 }

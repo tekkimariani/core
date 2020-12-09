@@ -2,15 +2,15 @@
 namespace tekki\core\html\attr;
 trait Preload{
     public function setPreload($value){
-        $this->appendAttribut([Attr::PRELOAD => $value]);
+        return $this->appendAttribut([Attr::PRELOAD => $value]);
     }
     public function setPreloadAuto(){
-        $this->setPreload(Attr::PRELOAD_AUTO);
+        return $this->setPreload(Attr::PRELOAD_AUTO);
     }
     public function setPreloadMetadata(){
-        $this->setPreload(Attr::PRELOAD_METADATA);
+        return $this->setPreload(Attr::PRELOAD_METADATA);
     }
     public function setPreloadNone(){
-        $this->setPreload(Attr::PRELOAD_NONE);
+        return $this->setPreload(Attr::PRELOAD_NONE);
     }
 }

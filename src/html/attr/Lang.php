@@ -5,6 +5,6 @@ trait Lang{
 		//	lang
 		//		Specifies the language of the element's content
 		//		<element lang="language_code">
-		$this->appendAttribut([Attr::LANG => $code]);
+		return $this->appendAttribut([Attr::LANG => $code]);
 	}
 }

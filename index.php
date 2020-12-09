@@ -17,9 +17,10 @@ $body = $html->body();
 $body->setClass(W3::BLACK);
 $header = $body->header();
 $header->setClass(W3::BLUE_GREY);
-$h1 = $header->h1();
-$h1->setClass(W3::TEXT_DEEP_ORANGE.W3::HOVER_AMBER);
-$h1->text('Composer PHP HTML5 Bibliothek');
+$h1 = $header->h1([], "Pah ")
+    ->setClass(W3::TEXT_DEEP_ORANGE.W3::HOVER_AMBER)
+    ->text('Composer PHP HTML5 Bibliothek');
+$h1->text('Uff');
 $div = $body->div();
 $nav = $div->nav();
 $nav->setClass(W3::LIGHT_BLUE);
@@ -32,26 +33,4 @@ $main->text('Content');
 $footer = $body->footer();
 $footer->setClass(W3::BLUE_GREY);
 $footer->text('Footer');
-$img = $body->img();
-$img->setSrc('pic/ohne_gentechnik.jpg');
-$img->setClass('fu');
 $input = $body->input();
-// $img->attrWidth('100px');
-// $img->attrHeight('100px');
-// $img->attrAlt('Bioland');
-/*
-    GlobalAttributes
-    use Accesskey;
-    use _Class;
-    use Contenteditable;
-    use DataCustom;
-    use Dir;
-    use Draggable;
-    use Hidden;
-    use Lang;
-    use Spellcheck;
-    use Style;
-    use Tabindex;
-    use Title;
-    use Translate;
-*/

@@ -9,12 +9,12 @@ trait Spellcheck{
 		//		Text values in input elements (not password)
 		//		Text in <textarea> elements
 		//		Text in editable elements
-		$this->appendAttribut([Attr::SPELLCHECK => ($bool ? Attr::SPELLCHECK_TRUE : Attr::SPELLCHECK_FALSE)]);
+		return $this->appendAttribut([Attr::SPELLCHECK => ($bool ? Attr::SPELLCHECK_TRUE : Attr::SPELLCHECK_FALSE)]);
 	}
 	public function setSpellcheckTrue(){
-		$this->setSpellcheck(true);
+		return $this->setSpellcheck(true);
 	}
 	public function setSpellcheckFalse(){
-		$this->setSpellcheck(false);
+		return $this->setSpellcheck(false);
 	}
 }

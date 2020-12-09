@@ -2,12 +2,12 @@
 namespace tekki\core\html\attr;
 trait Method{
     public function setMethod($method) {
-        $this->appendAttribut([Attr::METHOD => $method]);
+        return $this->appendAttribut([Attr::METHOD => $method]);
     }
     public function setMethodGet() {
-        $this->setMethod(Attr::METHOD_GET);
+        return $this->setMethod(Attr::METHOD_GET);
     }
     public function setMethodPost() {
-        $this->setMethod(Attr::METHOD_POST);
+        return $this->setMethod(Attr::METHOD_POST);
     }
 }

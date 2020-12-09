@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Form {
     public function setForm($formId){
-        $this->appendAttribut([Attr::FORM => $formId]);
+        return $this->appendAttribut([Attr::FORM => $formId]);
     }
 }

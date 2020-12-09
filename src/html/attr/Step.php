@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Step{
     public function setStep($step){
-        $this->appendAttribut([Attr::STEP => $step]);
+        return $this->appendAttribut([Attr::STEP => $step]);
     }
 }

@@ -5,6 +5,6 @@ trait Title{
 		//	title
 		//		Specifies extra information about an element
 		//		<element title="text">
-		$this->appendAttribut([Attr::TITLE => $text]);
+		return $this->appendAttribut([Attr::TITLE => $text]);
 	}
 }

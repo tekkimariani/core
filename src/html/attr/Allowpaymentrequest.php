@@ -2,12 +2,12 @@
 namespace tekki\core\html\attr;
 trait Allowpaymentrequest{
     public function setAllowpaymentrequest(string $value){
-        $this->appendAttribut([Attr::ALLOWPAYMENTREQUEST => $value]);
+        return $this->appendAttribut([Attr::ALLOWPAYMENTREQUEST => $value]);
     }
     public function setAllowpaymentrequestTrue(){
-        $this->setAllowpaymentrequest(Attr::ALLOWPAYMENTREQUEST_TRUE);
+        return $this->setAllowpaymentrequest(Attr::ALLOWPAYMENTREQUEST_TRUE);
     }
     public function setAllowpaymentrequestFalse(){
-        $this->setAllowpaymentrequest(Attr::ALLOWPAYMENTREQUEST_FALSE);
+        return $this->setAllowpaymentrequest(Attr::ALLOWPAYMENTREQUEST_FALSE);
     }
 }

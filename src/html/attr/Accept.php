@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Accept{
     public function setAccept(string $value){
-        $this->appendAttribut([Attr::ACCEPT => $value]);
+        return $this->appendAttribut([Attr::ACCEPT => $value]);
     }
 }

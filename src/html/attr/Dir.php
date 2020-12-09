@@ -8,15 +8,15 @@ trait Dir{
 		//		ltr		Default. Left-to-right text direction
 		//		rtl		Right-to-left text direction
 		//		auto	Let the browser figure out the text direction, based on the content (only recommended if the text direction is unknown)
-		$this->appendAttribut([Attr::DIR => $direction]);
+		return $this->appendAttribut([Attr::DIR => $direction]);
 	}
 	public function setDirLtr(){
-		$this->setDir(Attr::DIR_LTR);
+		return $this->setDir(Attr::DIR_LTR);
 	}
 	public function setDirRtl(){
-		$this->setDir(Attr::DIR_RTL);
+		return $this->setDir(Attr::DIR_RTL);
 	}
 	public function setDirAuto(){
-		$this->setDir(Attr::DIR_AUTO);
+		return $this->setDir(Attr::DIR_AUTO);
 	}
 }

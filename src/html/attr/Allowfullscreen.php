@@ -2,12 +2,12 @@
 namespace tekki\core\html\attr;
 trait Allowfullscreen{
     public function setAllowfullscreen(string $value){
-        $this->appendAttribut([Attr::ALLOWFULLSCREEN => $value]);
+        return $this->appendAttribut([Attr::ALLOWFULLSCREEN => $value]);
     }
     public function setAllowfullscreenTrue(){
-        $this->setAllowfullscreen(Attr::ALLOWFULLSCREEN_TRUE);
+        return $this->setAllowfullscreen(Attr::ALLOWFULLSCREEN_TRUE);
     }
     public function setAllowfullscreenFalse(){
-        $this->setAllowfullscreen(Attr::ALLOWFULLSCREEN_FALSE);
+        return $this->setAllowfullscreen(Attr::ALLOWFULLSCREEN_FALSE);
     }
 }

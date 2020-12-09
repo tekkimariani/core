@@ -5,6 +5,6 @@ trait Tabindex{
 		//	tabindex
 		//		Specifies the tabbing order of an element
 		//		<element tabindex="number">
-		$this->appendAttribut([Attr::TABINDEX => $number]);
+		return $this->appendAttribut([Attr::TABINDEX => $number]);
 	}
 }

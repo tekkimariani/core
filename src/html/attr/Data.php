@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Data{
     public function setData($value){
-        $this->appendAttribut([Attr::DATA => $value]);
+        return $this->appendAttribut([Attr::DATA => $value]);
     }
 }

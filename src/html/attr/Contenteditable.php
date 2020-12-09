@@ -7,12 +7,12 @@ trait Contenteditable{
 		//		<element contenteditable="true|false">
 		//		true	Specifies that the element is editable
 		//		false	Specifies that the element is not editable
-		$this->appendAttribut([Attr::CONTENTEDITABLE => ($contenteditable ? Attr::CONTENTEDITABLE_TRUE : Attr::CONTENTEDITABLE_FALSE)]);
+		return $this->appendAttribut([Attr::CONTENTEDITABLE => ($contenteditable ? Attr::CONTENTEDITABLE_TRUE : Attr::CONTENTEDITABLE_FALSE)]);
     }
     public function attrContenteditableTrue(){
-		$this->attrContenteditable(true);
+		return $this->attrContenteditable(true);
 	}
 	public function attrContenteditableFalse(){
-		$this->attrContenteditable(false);
+		return $this->attrContenteditable(false);
 	}
 }

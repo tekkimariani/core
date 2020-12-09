@@ -116,6 +116,7 @@ class HTMLElement {
 			$content = $this->doc->createTextNode($content);
 			$this->element->appendChild($content);
 		}
+		return $this;
 	}
 	public function appendAttribut(array $attr=[]){
 		if(count($attr)){
@@ -125,6 +126,7 @@ class HTMLElement {
 				$this->element->appendChild($item);
 			}
 		}
+		return $this;
 	}
     public function appendElement(HTMLElement $htmlelement){
         // $this->console->log(__METHOD__.': this: '.$this->name);

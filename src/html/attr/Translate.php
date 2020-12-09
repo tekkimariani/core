@@ -5,6 +5,6 @@ trait Translate{
 		//	translate
 		//		Specifies whether the content of an element should be translated or not
 		//		<element translate="yes|no">
-		$this->appendAttribut([Attr::TRANSLATE => ($bool ? 'yes' : 'no')]);
+		return $this->appendAttribut([Attr::TRANSLATE => ($bool ? 'yes' : 'no')]);
 	}
 }

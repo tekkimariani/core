@@ -5,7 +5,7 @@ trait EventAttributes{
         //	Event
         //		Specifies the location of the linked document
         //	    URL
-        $this->appendAttribut([$name => $script]);
+        return $this->appendAttribut([$name => $script]);
     }
 
     /*
@@ -138,186 +138,186 @@ trait EventAttributes{
     // Window Event Attributes
     // Events triggered for the window object (applies to the <body> tag):
     public function onAfterprint($script) {
-        $this->addEvent('onafterprint', $script);
+        return $this->addEvent('onafterprint', $script);
     }
     public function onBeforeprint($script) {
-        $this->addEvent('onbeforeprint', $script);
+        return $this->addEvent('onbeforeprint', $script);
     }
   
     public function onBeforeunload($script) {
-        $this->addEvent('onbeforeunload', $script);
+        return $this->addEvent('onbeforeunload', $script);
     }
     public function onError($script) {
-        $this->addEvent('onerror', $script);
+        return $this->addEvent('onerror', $script);
     }
     public function onHashchange($script) {
-        $this->addEvent('onhashchange', $script);
+        return $this->addEvent('onhashchange', $script);
     }
     public function onLoad($script) {
-        $this->addEvent('onload', $script);
+        return $this->addEvent('onload', $script);
     }
     public function onMessage($script) {
-        $this->addEvent('onmessage', $script);
+        return $this->addEvent('onmessage', $script);
     }
     public function onOffline($script) {
-        $this->addEvent('onoffline', $script);
+        return $this->addEvent('onoffline', $script);
     }
     public function onOnline($script) {
-        $this->addEvent('ononline', $script);
+        return $this->addEvent('ononline', $script);
     }
     public function onPagehide($script) {
-        $this->addEvent('onpagehide', $script);
+        return $this->addEvent('onpagehide', $script);
     }
 
     public function onPageshow($script) {
-        $this->addEvent('onpageshow', $script);
+        return $this->addEvent('onpageshow', $script);
     }
     public function onPopstate($script) {
-        $this->addEvent('onpopstate', $script);
+        return $this->addEvent('onpopstate', $script);
     }
     public function onResize($script) {
-        $this->addEvent('onresize', $script);
+        return $this->addEvent('onresize', $script);
     }
     public function onStorage($script) {
-        $this->addEvent('onstorage', $script);
+        return $this->addEvent('onstorage', $script);
     }
     public function onUnload($script) {
-        $this->addEvent('onunload', $script);
+        return $this->addEvent('onunload', $script);
     }
 
     //  Form Event Attributes
     //  Events triggered by actions inside a HTML form (applies to almost all HTML elements, but is most used in form elements):
     public function onBlur($script) {
-        $this->addEvent('onblur', $script);
+        return $this->addEvent('onblur', $script);
     }
     public function onChange($script) {
-        $this->addEvent('onchange', $script);
+        return $this->addEvent('onchange', $script);
     }
     public function onContextmenu($script) {
-        $this->addEvent('oncontextmenu', $script);
+        return $this->addEvent('oncontextmenu', $script);
     }
     public function onFocus($script) {
-        $this->addEvent('onfocus', $script);
+        return $this->addEvent('onfocus', $script);
     }
     public function onInput($script) {
-        $this->addEvent('oninput', $script);
+        return $this->addEvent('oninput', $script);
     }
     public function onInvalid($script) {
-        $this->addEvent('oninvalid', $script);
+        return $this->addEvent('oninvalid', $script);
     }
     public function onReset($script) {
-        $this->addEvent('onreset', $script);
+        return $this->addEvent('onreset', $script);
     }
     public function onSearch($script) {
-        $this->addEvent('onsearch', $script);
+        return $this->addEvent('onsearch', $script);
     }
     public function onSelect($script) {
-        $this->addEvent('onselect', $script);
+        return $this->addEvent('onselect', $script);
     }
     public function onSubmit($script) {
-        $this->addEvent('onsubmit', $script);
+        return $this->addEvent('onsubmit', $script);
     }
 
     //  Keyboard Event Attributes
     public function onKeydown($script) {
-        $this->addEvent('onkeydown', $script);
+        return $this->addEvent('onkeydown', $script);
     }
     public function onKeypress($script) {
-        $this->addEvent('onkeypress', $script);
+        return $this->addEvent('onkeypress', $script);
     }
     public function onKeyup($script) {
-        $this->addEvent('onkeyup', $script);
+        return $this->addEvent('onkeyup', $script);
     }
 
     //  Mouse Event Attributes
     public function onClick($script) {
-        $this->addEvent('onclick', $script);
+        return $this->addEvent('onclick', $script);
     }
     public function onDblclick($script) {
-        $this->addEvent('ondblclick', $script);
+        return $this->addEvent('ondblclick', $script);
     }
     public function onMousedown($script) {
-        $this->addEvent('onmousedown', $script);
+        return $this->addEvent('onmousedown', $script);
     }
     public function onMousemove($script) {
-        $this->addEvent('onmousemove', $script);
+        return $this->addEvent('onmousemove', $script);
     }
     public function onMouseout($script) {
-        $this->addEvent('onmouseout', $script);
+        return $this->addEvent('onmouseout', $script);
     }
     public function onMouseover($script) {
-        $this->addEvent('onmouseover', $script);
+        return $this->addEvent('onmouseover', $script);
     }
     public function onMouseup($script) {
-        $this->addEvent('onmouseup', $script);
+        return $this->addEvent('onmouseup', $script);
     }
     public function onMouseWheel($script) {
-        $this->addEvent('onwheel', $script);
+        return $this->addEvent('onwheel', $script);
     }
     public function onWheel($script) {
-        $this->addEvent('onwheel', $script);
+        return $this->addEvent('onwheel', $script);
     } 
     
     //  Drag Event Attributes
     public function onDrag($script) {
-        $this->addEvent('ondrag', $script);
+        return $this->addEvent('ondrag', $script);
     }
     public function onDragend($script) {
-        $this->addEvent('ondragend', $script);
+        return $this->addEvent('ondragend', $script);
     }
     public function onDragenter($script) {
-        $this->addEvent('ondragenter', $script);
+        return $this->addEvent('ondragenter', $script);
     }
     public function onDragleave($script) {
-        $this->addEvent('ondragleave', $script);
+        return $this->addEvent('ondragleave', $script);
     }
     public function onDragover($script) {
-        $this->addEvent('ondragover', $script);
+        return $this->addEvent('ondragover', $script);
     }
     public function onDragstart($script) {
-        $this->addEvent('ondragstart', $script);
+        return $this->addEvent('ondragstart', $script);
     }
     public function onDrop($script) {
-        $this->addEvent('ondrop', $script);
+        return $this->addEvent('ondrop', $script);
     }
     public function onScroll($script) {
-        $this->addEvent('onscroll', $script);
+        return $this->addEvent('onscroll', $script);
     }
 
     //  Clipboard Event Attributes
     public function onCopy($script) {
-        $this->addEvent('oncopy', $script);
+        return $this->addEvent('oncopy', $script);
     }
     public function onCut($script) {
-        $this->addEvent('oncut', $script);
+        return $this->addEvent('oncut', $script);
     }
     public function onPaste($script) {
-        $this->addEvent('onpaste', $script);
+        return $this->addEvent('onpaste', $script);
     }
 
     //  Media Event Attributes
     // Events triggered by medias like videos, images and audio.
     // (applies to all HTML elements, but is most common in media elements, like <audio>, <embed>, <img>, <object>, and <video>)
     public function onAbort($script) {
-        $this->addEvent('onabort', $script);
+        return $this->addEvent('onabort', $script);
     }
     public function onCanplay($script) {
-        $this->addEvent('oncanplay', $script);
+        return $this->addEvent('oncanplay', $script);
     }
     public function onCanplaythrough($script) {
-        $this->addEvent('oncanplaythrough', $script);
+        return $this->addEvent('oncanplaythrough', $script);
     }
     public function onCuechange($script) {
-        $this->addEvent('oncuechange', $script);
+        return $this->addEvent('oncuechange', $script);
     }
     public function onDurationchange($script) {
-        $this->addEvent('ondurationchange', $script);
+        return $this->addEvent('ondurationchange', $script);
     }
     public function onEmptied($script) {
-        $this->addEvent('onemptied', $script);
+        return $this->addEvent('onemptied', $script);
     }
     public function onEnded($script) {
-        $this->addEvent('onended', $script);
+        return $this->addEvent('onended', $script);
     }
     /*
     public function onError($script) {
@@ -325,55 +325,55 @@ trait EventAttributes{
     }
     */
     public function onLoadeddata($script) {
-        $this->addEvent('onloadeddata', $script);
+        return $this->addEvent('onloadeddata', $script);
     }
     public function onLoadedmetadata($script) {
-        $this->addEvent('onloadedmetadata', $script);
+        return $this->addEvent('onloadedmetadata', $script);
     }
     public function onLoadstart($script) {
-        $this->addEvent('onloadstart', $script);
+        return $this->addEvent('onloadstart', $script);
     }
     public function onPause($script) {
-        $this->addEvent('onpause', $script);
+        return $this->addEvent('onpause', $script);
     }
     public function onPlay($script) {
-        $this->addEvent('onplay', $script);
+        return $this->addEvent('onplay', $script);
     }
     public function onPlaying($script) {
-        $this->addEvent('onplaying', $script);
+        return $this->addEvent('onplaying', $script);
     }
     public function onProgress($script) {
-        $this->addEvent('onprogress', $script);
+        return $this->addEvent('onprogress', $script);
     }
     public function onRatechange($script) {
-        $this->addEvent('onratechange', $script);
+        return $this->addEvent('onratechange', $script);
     }
 
     public function onSeeked($script) {
-        $this->addEvent('onseeked', $script);
+        return $this->addEvent('onseeked', $script);
     }
     public function onSeeking($script) {
-        $this->addEvent('onseeking', $script);
+        return $this->addEvent('onseeking', $script);
     }
     public function onStalled($script) {
-        $this->addEvent('onstalled', $script);
+        return $this->addEvent('onstalled', $script);
     }
     public function onSuspend($script) {
-        $this->addEvent('onsuspend', $script);
+        return $this->addEvent('onsuspend', $script);
     }
     public function onTimeupdate($script) {
-        $this->addEvent('ontimeupdate', $script);
+        return $this->addEvent('ontimeupdate', $script);
     }
     public function onVolumechange($script) {
-        $this->addEvent('onvolumechange', $script);
+        return $this->addEvent('onvolumechange', $script);
     }
     public function onWaiting($script) {
-        $this->addEvent('onwaiting', $script);
+        return $this->addEvent('onwaiting', $script);
     }
 
 
     //  Misc Event Attributes
     public function onToggle($script) {
-        $this->addEvent('ontoggle', $script);
+        return $this->addEvent('ontoggle', $script);
     }
 }

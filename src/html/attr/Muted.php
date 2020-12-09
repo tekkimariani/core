@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Muted{
     public function setMuted(){
-        $this->appendAttribut([Attr::MUTED => null]);
+        return $this->appendAttribut([Attr::MUTED => null]);
     }
 }

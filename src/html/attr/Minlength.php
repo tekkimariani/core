@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Minlength{
     public function setMinlength($minlength){
-        $this->appendAttribut([Attr::MINLENGTH => $minlength]);
+        return $this->appendAttribut([Attr::MINLENGTH => $minlength]);
     }
 }

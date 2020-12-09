@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Datetime{
     public function setDatetime(string $value){
-        $this->appendAttribut([Attr::DATETIME => $value]);
+        return $this->appendAttribut([Attr::DATETIME => $value]);
     }
 }

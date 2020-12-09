@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Formnovalidate {
     public function setFormnovalidate(){
-        $this->appendAttribut([Attr::FORMNOVALIDATE => null]);
+        return $this->appendAttribut([Attr::FORMNOVALIDATE => null]);
     }
 }

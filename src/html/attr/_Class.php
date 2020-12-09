@@ -11,6 +11,6 @@ trait _Class{
 		//		Naming rules:
 		//		Must begin with a letter A-Z or a-z
 		//		Can be followed by: letters (A-Za-z), digits (0-9), hyphens ("-"), and underscores ("_")
-		$this->appendAttribut([Attr::_CLASS => $classname]);
+		return $this->appendAttribut([Attr::_CLASS => $classname]);
 	}
 }

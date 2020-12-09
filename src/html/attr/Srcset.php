@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Srcset{
     public function setSrcset(string $urllist){
-        $this->appendAttribut([Attr::SRCSET => $urllist]);
+        return $this->appendAttribut([Attr::SRCSET => $urllist]);
     }
 }

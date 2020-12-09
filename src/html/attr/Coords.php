@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Coords{
     public function setCoords($coords){
-        $this->appendAttribut([Attr::COORDS => $coords]);
+        return $this->appendAttribut([Attr::COORDS => $coords]);
     }
 }

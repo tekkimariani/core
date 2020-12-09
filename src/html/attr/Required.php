@@ -2,6 +2,6 @@
 namespace tekki\core\html\attr;
 trait Required{
     public function setRequired(){
-        $this->appendAttribut([Attr::REQUIRED => null]);
+        return $this->appendAttribut([Attr::REQUIRED => null]);
     }
 }
