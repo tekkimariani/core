@@ -2,7 +2,7 @@
     "name": "tekki/core",
     "type": "library",
     "description": "Helper to build webpages",
-    "license": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "tekki mariani",
