@@ -2,7 +2,6 @@
 namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
-use FirePHP;
 use tekki\core\html\dom\HTMLElement;
 use tekki\core\html\attr\{Attr};
 use tekki\core\html\attr\{Charset, Content, HttpEquiv, Name};
@@ -28,12 +27,7 @@ class Meta extends HTMLElement {
     public const NAME_VIEWPORT                          = Attr::NAME_VIEWPORT;
     protected $name = 'meta';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
-        /*
-$this->console = FirePHP::getInstance(true);
-        $this->console->setEnabled(true);
-        // $this->console->log(__METHOD__);
-*/
-        parent::__construct($this->name, $doc, $container, $attr, $content);
+        return parent::__construct($this->name, $doc, $container, $attr, $content);
     }
     /*
     // Most HTML elements have a start tag and an end tag that indicate where the element begins and where it ends.
@@ -54,11 +48,11 @@ $this->console = FirePHP::getInstance(true);
         $this->appendAttribut([self::CHARSET => $charset]);
     }
     */
-    
+    /*
     public function charset(string $charset = self::CHARSET_UTF_8){
         $this->setCharset($charset);
     }
-    
+    */
     /*
     //  content         text                        Specifies the value associated with the http-equiv or name attribute
     public function attrContent(string $content) {
@@ -94,13 +88,13 @@ $this->console = FirePHP::getInstance(true);
         $this->appendAttribut([self::NAME => $name]);
     }
     */
-    public function applicationName(string $name) {
+    public function setApplicationName(string $name) {
         $this->setName(self::NAME_APPLICATION_NAME);
         $this->setContent($name);
     }
     //  Define the author of a page:
 
-	public function author(string $name) {
+	public function setAuthor(string $name) {
         //  <meta name="author" content="John Doe">
         $this->setName(self::NAME_AUTHOR);
         $this->setContent($name);
@@ -109,18 +103,18 @@ $this->console = FirePHP::getInstance(true);
     
     //  Define a description of your web page:
     //  <meta name="description" content="Free Web tutorials for HTML and CSS">
-    public function description(string $description) {
+    public function setDescription(string $description) {
         $this->setName(self::NAME_DESCRIPTION);
         $this->setContent($description);
     }
-    public function generator(string $generator) {
+    public function setGenerator(string $generator) {
         $this->setName(self::NAME_GENERATOR);
         $this->setContent($generator);
     }
     //  More Examples
     //  Define keywords for search engines:
     //  <meta name="keywords" content="HTML, CSS, JavaScript">
-    public function keywords(string $keywords) {
+    public function setKeywords(string $keywords) {
         $this->setName(self::NAME_KEYWORDS);
         $this->setContent($keywords);
     }
@@ -138,7 +132,7 @@ $this->console = FirePHP::getInstance(true);
     //  This gives the browser instructions on how to control the page's dimensions and scaling.
     //  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
     //  The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
-    public function viewport($viewport = 'width=device-width, initial-scale=1'){
+    public function setViewport($viewport = 'width=device-width, initial-scale=1'){
         $this->setName(self::NAME_VIEWPORT);
         $this->setContent($viewport);
     }

@@ -2,7 +2,6 @@
 namespace tekki\core\html;
 use \DOMDocument;
 use \DOMElement;
-use FirePHP;
 use tekki\core\html\dom\HTMLElement;
 use tekki\core\html\attr\{EventAttributes};
 class Cite extends HTMLElement {
@@ -10,18 +9,11 @@ class Cite extends HTMLElement {
     // Only uses global attributes.
     /*
     //  The <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
-    //
     //  Note: A person's name is not the title of a work.
-    //
     //  The text in the <cite> element usually renders in italic.
     */
     protected $name = 'cite';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
-        /*
-$this->console = FirePHP::getInstance(true);
-        $this->console->setEnabled(true);
-        // $this->console->log(__METHOD__);
-*/
-        parent::__construct($this->name, $doc, $container, $attr, $content);
+        return parent::__construct($this->name, $doc, $container, $attr, $content);
     }
 }

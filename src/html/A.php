@@ -48,6 +48,6 @@ class A extends HTMLElement {
     public const TYPE                                       = Attr::TYPE;
     protected $name = 'a';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
-        parent::__construct($this->name, $doc, $container, $attr, $content);
+        return parent::__construct($this->name, $doc, $container, $attr, $content);
     }
 }

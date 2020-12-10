@@ -25,6 +25,6 @@ class _Object extends HTMLElement {
     public const WIDTH          = Attr::WIDTH;
     protected $name = 'object';
     public function __construct(DOMDocument $doc=null, DOMElement $container=null, array $attr=[], string $content=null){
-        parent::__construct($this->name, $doc, $container, $attr, $content);
+        return parent::__construct($this->name, $doc, $container, $attr, $content);
     }
 }
