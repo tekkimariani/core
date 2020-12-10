@@ -14,8 +14,5 @@
         "psr-4": {
             "tekki\\core\\": "src/"
         }
-    },
-    "require": {
-        "firephp/firephp-core": "^0.5.3"
     }
 }
