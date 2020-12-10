@@ -12,7 +12,6 @@ $head->meta()->setApplicationName('Applicationname');
 $head->meta()->setDescription('This Application is for showing Texts or Images in a HTML-Format.');
 $head->meta()->setKeywords('Composer PHP HTML5 Bibliothek');
 $head->includeCSS('W3.css');
-$head->includeCSS('demo.css');
 $body = $html->body();
 $body->setClass(W3::BLACK);
 $header = $body->header();
