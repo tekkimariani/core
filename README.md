@@ -1,5 +1,9 @@
 # core
 Small PHP lib to build webpages in pure PHP.
+#### Install via Composer
+```
+composer require tekki/core
+```
 #### HTML5
   * All HTML5 tags included
 #### Example use of class HTML
