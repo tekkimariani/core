@@ -18,11 +18,21 @@ class Config{
         }
         return false;
     }
+    /**
+     * Liefert keine URI. (Name falsch)
+     * Liefert den falschen Pfad.
+     * Ist derzeit unbrauchbar.
+     * Wird im Moment durch config.php ersetzt.
+     */
     public static function getUri() {
         $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
         $uri = str_replace(self::getPath(), '', $request_uri);
         return $uri;
     }
+    /**
+     * Liefert den Pfad zum Vendor-Ordner
+     * Ist derartig nicht zu gebrauchen.
+     */
     public static function getPath() {
         $dir = str_replace(['/','\\'], [DIRECTORY_SEPARATOR,DIRECTORY_SEPARATOR], __DIR__);
         $documentroot = str_replace(['/','\\'], [DIRECTORY_SEPARATOR,DIRECTORY_SEPARATOR], $_SERVER['DOCUMENT_ROOT']);
@@ -39,6 +49,11 @@ class Config{
         }
         return $path;
     }
+    /**
+     * Liefert mit Hilfe des Pfades der in der config.php festgelegt
+     * wurde einen domainunabhängigen Link zum Rootpath des Projektes.
+     * Dies wird genutzt um Dateien/Links innerhalb des Projektes zu referenzieren.
+     */
     public static function getRootpath() {
         $rootpath = 'https://'.$_SERVER['SERVER_NAME'].self::get('path');
         return $rootpath;
