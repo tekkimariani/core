@@ -1,6 +1,6 @@
 <?php
 namespace tekki\core\html\attr;
-trait Acceptcharset{
+trait AcceptCharset {
     public function setAcceptcharset(string $value){
         return $this->appendAttribut([Attr::ACCEPT_CHARSET => $value]);
     }
