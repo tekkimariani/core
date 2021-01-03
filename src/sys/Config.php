@@ -18,7 +18,7 @@ class Config{
         }
         return false;
     }
-    /**
+    /*
      * Liefert keine URI. (Name falsch)
      * Liefert den falschen Pfad.
      * Ist derzeit unbrauchbar.
@@ -29,7 +29,7 @@ class Config{
         $uri = str_replace(self::getPath(), '', $request_uri);
         return $uri;
     }
-    /**
+    /*
      * Liefert den Pfad zum Vendor-Ordner
      * Ist derartig nicht zu gebrauchen.
      */
@@ -49,7 +49,7 @@ class Config{
         }
         return $path;
     }
-    /**
+    /*
      * Liefert mit Hilfe des Pfades der in der config.php festgelegt
      * wurde einen domainunabhängigen Link zum Rootpath des Projektes.
      * Dies wird genutzt um Dateien/Links innerhalb des Projektes zu referenzieren.
