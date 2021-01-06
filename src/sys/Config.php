@@ -1,11 +1,11 @@
 <?php
 namespace tekki\core\sys;
 class Config{
-    protected static $PATH_TO_CONFIG = '../conf/config.php';
+    protected static $configpath = '../conf/config.php';
     public function __construct() {
     }
     public static function get($path = null) {
-        require self::$PATH_TO_CONFIG;
+        require self::$configpath;
         if ($path) {
             $config = $settings;
             $config['DOCUMENT_URI'] = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
