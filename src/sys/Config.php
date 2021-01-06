@@ -5,7 +5,7 @@ class Config{
     public function __construct() {
     }
     public static function get($path = null) {
-        require $PATH_TO_CONFIG;
+        require self::$PATH_TO_CONFIG;
         if ($path) {
             $config = $settings;
             $config['DOCUMENT_URI'] = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
