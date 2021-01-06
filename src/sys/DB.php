@@ -12,7 +12,7 @@ class DB{
     private function __construct(){
         //$this->log = new sys\Log(sys\Config::get('logfile/debug'),sys\Config::get('settings/debug'));
         //$this->log->LogDebugMethod(__METHOD__);
-        $host = Config::get('mysql/host');
+        $host = Config::get('db/sys/host');
         if('localhost'==$host or $host=='127.0.0.1'){
             $pong = true; 
         }else{
@@ -21,7 +21,7 @@ class DB{
         }
         if($pong){
             try{
-                $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host') . ';dbname=' . Config::get('mysql/db'), Config::get('mysql/user'), Config::get('mysql/password'), array(PDO::ATTR_PERSISTENT=>true));
+                $this->_pdo = new PDO('mysql:host=' . Config::get('db/sys/host') . ';dbname=' . Config::get('db/sys/db'), Config::get('db/sys/user'), Config::get('db/sys/password'), array(PDO::ATTR_PERSISTENT=>true));
                 //$this->log->LogDebug(__METHOD__.'() => successfully connected to database on "'.Config::get('mysql/host').'"');
                 $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
                 $this->_pdo->exec("SET CHARACTER SET utf8");
@@ -31,7 +31,7 @@ class DB{
             }
         }else{
             echo '<br><br><h2>Error</h2><h3>Der Datenbankserver hat keine Lust zu arbeiten, oder eventuell besteht grade keine Internetverbindung.</h3>';
-            echo   Config::get('mysql/host');
+            echo   Config::get('db/sys/host');
             //$this->log->LogFatal(__METHOD__.'() => could not ping the server! (is there an internet connection?)');
             exit();
         }
