@@ -1,5 +1,8 @@
 <?php
 namespace tekki\core\sys;
+
+use Exception;
+
 class Config{
     protected static $configpath = '../conf/config.php';
     public function __construct() {
@@ -13,6 +16,9 @@ class Config{
             foreach ($path as $bit) {
                 if (isset($config[$bit])) {
                     $config = $config[$bit];
+                }else{
+                    throw new Exception('Configuration "'.$path.'" dont exist');
+                    return false;
                 }
             }
             return $config;
