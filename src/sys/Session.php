@@ -1,7 +1,7 @@
 <?php
 namespace tekki\core\sys;
 class Session{
-    public static function exists(int $name){
+    public static function exists(string $name){
         return (isset($_SESSION[$name])) ? true : false;
     }
     public static function put(string $name, string $value){
