@@ -21,7 +21,7 @@ class DB{
         }
         if($pong){
             try{
-                $dsn = 'mysql:host=' . Config::get('db/sys/host') . ';dbname=' . Config::get('db/sys/db').';charset=UTF8';
+                $dsn = 'mysql:host=' . Config::get('db/sys/host') . ';dbname=' . Config::get('db/sys/name').';charset=UTF8';
                 $user = Config::get('db/sys/user');
                 $pass = Config::get('db/sys/pass');
                 $opt = [PDO::ATTR_PERSISTENT=>true];
