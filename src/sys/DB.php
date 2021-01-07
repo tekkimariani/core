@@ -21,7 +21,7 @@ class DB{
         }
         if($pong){
             try{
-                $this->_pdo = new PDO('mysql:host=' . Config::get('db/sys/host') . ';dbname=' . Config::get('db/sys/db'), Config::get('db/sys/user'), Config::get('db/sys/password'), array(PDO::ATTR_PERSISTENT=>true));
+                $this->_pdo = new PDO('mysql:host=' . Config::get('db/sys/host') . ';dbname=' . Config::get('db/sys/db'), Config::get('db/sys/user'), Config::get('db/sys/pass'), array(PDO::ATTR_PERSISTENT=>true));
                 //$this->log->LogDebug(__METHOD__.'() => successfully connected to database on "'.Config::get('mysql/host').'"');
                 $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
                 $this->_pdo->exec("SET CHARACTER SET utf8");
