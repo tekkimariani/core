@@ -12,8 +12,8 @@ class Config{
         if ($path) {
             $config = $settings;
             $config['DOCUMENT_URI'] = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
-            $path = explode('/',$path);
-            foreach ($path as $bit) {
+            $paths = explode('/',$path);
+            foreach ($paths as $bit) {
                 if (isset($config[$bit])) {
                     $config = $config[$bit];
                 }else{
