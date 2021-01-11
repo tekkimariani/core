@@ -58,7 +58,7 @@ class DB{
             $x = 1;
             if(count($params)){
                 foreach($params as $param){
-                    $this->log->LogDebug(__METHOD__.'() => $param: "'.$param.'"');
+                    //$this->log->LogDebug(__METHOD__.'() => $param: "'.$param.'"');
                     if($this->_query->bindValue($x, $param)){
                         #$this->log->LogDebug(__METHOD__.'() => bindValue success');
                     }else{                
